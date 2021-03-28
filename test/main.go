@@ -1,4 +1,4 @@
-package main
+package leetcode
 
 import (
 	"fmt"
@@ -6,33 +6,21 @@ import (
 	"log"
 )
 
-func main(){
-
-	//this is the date today
-	today := calendar.Date{}
-
+func main() {
 	event := calendar.Event{}
-
-
-	event.SetTitle("Program..")
-	event.SetDate(today)
-
-
-	err := today.SetYear(2012)
-	if err != nil{
-		log.Fatal(err)
-	}
-	err = today.SetMonth(12)
-	if err != nil{
-		log.Fatal(err)
-	}
-	err = today.SetDate(31)
+	err := event.SetMonth(12)
 	if err != nil {
 		log.Fatal(err)
 	}
-
+	err = event.SetDate(30)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = event.SetYear(2000)
+	if err != nil {
+		log.Fatal(err)
+	}
 	//get the values using the getter method
-	fmt.Println(today.Year())
-	fmt.Println(today.Month())
-	fmt.Println(today.Date())
+	fmt.Println(event.Year())
+	fmt.Println(event.Month())
 }

@@ -51,20 +51,3 @@ func reverseOperation(elems []int) int {
 
 	return len(elems)
 }
-
-func main() {
-	var testCases, numberOfElem int
-	_, err := fmt.Scan(&testCases)
-	if err != nil {
-		log.Fatal(err)
-	}
-	for i := 1; i <= testCases; i++ {
-		_, err = fmt.Scan(&numberOfElem)
-		if err != nil {
-			log.Fatal(err)
-		}
-		elems := make([]int, 0, numberOfElem)
-		elems = takeSliceInput(elems)
-		fmt.Printf("Case #%d: %d\n", i, reverseSort(elems))
-	}
-}

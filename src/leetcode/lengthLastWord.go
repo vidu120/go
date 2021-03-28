@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -12,8 +11,8 @@ func lengthOfLastWord(s string) int {
 	s = strings.TrimSpace(s)
 	lengthOfWord := 0
 
-	for i := len(s) - 1;i >= 0;i--{
-		if s[i] == ' '{
+	for i := len(s) - 1; i >= 0; i-- {
+		if s[i] == ' ' {
 			break
 		}
 		lengthOfWord++
@@ -22,9 +21,10 @@ func lengthOfLastWord(s string) int {
 	return lengthOfWord
 }
 
-func main(){
-	str := "a "
-	fmt.Println(lengthOfLastWord(str))
-	str = " "
-	fmt.Println(lengthOfLastWord(str))
-}
+//
+//func main(){
+//	str := "a "
+//	fmt.Println(lengthOfLastWord(str))
+//	str = " "
+//	fmt.Println(lengthOfLastWord(str))
+//}
